@@ -1,27 +1,33 @@
-﻿using System;
+﻿using Castle.DynamicProxy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Castle.DynamicProxy;
 
 namespace Sparrow.Net.Remoting
 {
     internal class RemoteInterceptor : IInterceptor
     {
-        private readonly IRemoteExecuter _executer;
-        private readonly IAsyncInterceptor _intercptor;
+        private readonly Type _taskType = typeof(Task);
+        private readonly IInterceptor _intrcptor;
 
-        public RemoteInterceptor(IRemoteExecuter executer)
+        public RemoteInterceptor()
         {
-            _executer = executer;
-
-            _intercptor = new RemoteAsyncInterceptor(_executer);
+            _intrcptor = new RemoteAsyncInterceptor().ToInterceptor();
         }
 
         public void Intercept(IInvocation invocation)
         {
-
+            if (invocation.Method.ReturnType.IsSubclassOf(_taskType))
+            {
+                _intrcptor.Intercept(invocation);
+            }
+            else
+            {
+                invocation.ReturnValue = 
+                    invocation.Method.Invoke(invocation.Proxy, invocation.Arguments);
+            }
         }
     }
 }

@@ -25,18 +25,13 @@ namespace Sparrow.Net.SignalR
             return _builder.Services;
         }
 
-        protected override IRemoteExecuter GetCallbackExecuter()
-        {
-            return new ServerRemoteExecuter();
-        }
-
         public override void Run()
         {
             if (_builder != null)
             {
                 var app = _builder.Build();
 
-                app.MapHub<ServerRemoteHub>("/remote");
+                app.MapHub<RemoteHub>("/remote");
 
                 app.Run();
             }

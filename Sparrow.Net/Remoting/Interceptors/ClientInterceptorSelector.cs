@@ -8,15 +8,15 @@ using Castle.DynamicProxy;
 
 namespace Sparrow.Net.Remoting
 {
-    internal class RemoteInterceptorSelector : IInterceptorSelector
+    internal class ClientInterceptorSelector : IInterceptorSelector
     {
         private readonly IInterceptor[] _interceptors;
 
-        public RemoteInterceptorSelector(IRemoteExecuter executer)
+        public ClientInterceptorSelector(IRemoteSender executer)
         {
             _interceptors = new IInterceptor[]
             {
-                new RemoteInterceptor(executer)
+                new ClientInterceptor(executer)
             };
         }
 

@@ -1,0 +1,12 @@
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.csproj.AssemblyReference.cache
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.AssemblyInfoInputs.cache
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.AssemblyInfo.cs
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.csproj.CoreCompileInputs.cache
+D:\Github\Sparrow\Sparrow.Net\bin\Debug\net7.0\Sparrow.Net.deps.json
+D:\Github\Sparrow\Sparrow.Net\bin\Debug\net7.0\Sparrow.Net.dll
+D:\Github\Sparrow\Sparrow.Net\bin\Debug\net7.0\Sparrow.Net.pdb
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.dll
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\refint\Sparrow.Net.dll
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\Sparrow.Net.pdb
+D:\Github\Sparrow\Sparrow.Net\obj\Debug\net7.0\ref\Sparrow.Net.dll

@@ -8,14 +8,8 @@ namespace Sparrow.Net.Remoting
 {
     public interface IRemoteExecuter
     {
-        Action<RemoteCall>? Callback { get; set; }
-
-        void Execute(RemoteCall method);
-        object Invoke(RemoteCall method);
-
-        Task ExecuteAsync(RemoteCall method);
-        Task<object> InvokeAsync(RemoteCall method);
-
-        void Cancel();
+        IRemoteCallback Callback { get; }
+        Task<RemoteResult> ExecuteAsync(
+            RemoteCall call, CancellationToken cancellationToken);
     }
 }

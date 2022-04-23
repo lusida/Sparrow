@@ -12,14 +12,14 @@ namespace Sparrow.Net.Remoting
         private readonly ProxyGenerator _generator = new ProxyGenerator();
         private readonly ProxyGenerationOptions _options = new ProxyGenerationOptions();
 
-        protected RemoteClient(IRemoteExecuter executer)
+        protected RemoteClient(IRemoteSender sender)
         {
-            this.Executer = executer;
+            this.Sender = sender;
 
-            _options.Selector = new RemoteInterceptorSelector(this.Executer);
+            _options.Selector = new ClientInterceptorSelector(this.Sender);
         }
 
-        public IRemoteExecuter Executer { get; }
+        public IRemoteSender Sender { get; }
 
         public TService GetService<TService>() where TService : class
         {
@@ -28,9 +28,9 @@ namespace Sparrow.Net.Remoting
 
         public virtual void Dispose()
         {
-            this.Executer.Cancel();
+            this.Sender.Cancel();
 
-            if (this.Executer is IDisposable disposable)
+            if (this.Sender is IDisposable disposable)
             {
                 disposable.Dispose();
             }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8YpVxHNKiSmYkVvwejl9TPlSIkyh73/KE6EoYAyJcLQ=",
+  "Source": "Sparrow.Net.SignalR",
+  "BasePath": "_content/Sparrow.Net.SignalR",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

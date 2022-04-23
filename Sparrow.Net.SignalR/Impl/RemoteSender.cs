@@ -9,12 +9,12 @@ using Sparrow.Net.Remoting;
 
 namespace Sparrow.Net.SignalR
 {
-    internal class ClientRemoteExecuter : IRemoteExecuter, IDisposable
+    internal class RemoteSender : IRemoteSender, IDisposable
     {
         private readonly HubConnection _connection;
         private CancellationTokenSource? _cancellationTokenSource;
 
-        public ClientRemoteExecuter(string hostUrl)
+        public RemoteSender(string hostUrl)
         {
             var builder = new HubConnectionBuilder().WithUrl(hostUrl);
 
@@ -30,7 +30,7 @@ namespace Sparrow.Net.SignalR
             this.Callback?.Invoke(call);
         }
 
-        private CancellationToken GetCancellationToken()
+        private CancellationToken GetCancellationToken(CancellationToken? cancellationToken)
         {
             if (_cancellationTokenSource == null ||
                 _cancellationTokenSource.IsCancellationRequested)
@@ -38,31 +38,41 @@ namespace Sparrow.Net.SignalR
                 _cancellationTokenSource = new CancellationTokenSource();
             }
 
-            return _cancellationTokenSource.Token;
+            if (cancellationToken.HasValue)
+            {
+                var source = CancellationTokenSource.CreateLinkedTokenSource(
+                    _cancellationTokenSource.Token, cancellationToken.Value);
+
+                return source.Token;
+            }
+            else
+            {
+                return _cancellationTokenSource.Token;
+            }
         }
 
-        public async void Execute(RemoteCall method)
+        public async void Execute(RemoteCall call)
         {
-            var cancellicationToken = this.GetCancellationToken();
+            var cancellicationToken = this.GetCancellationToken(null);
 
             await _connection.SendAsync(
-                "Execute", method, cancellicationToken);
+                "Execute", call, cancellicationToken);
         }
 
-        public Task ExecuteAsync(RemoteCall method)
+        public Task ExecuteAsync(RemoteCall call, CancellationToken cancellationToken)
         {
-            var cancellicationToken = this.GetCancellationToken();
+            var cancellicationToken = this.GetCancellationToken(cancellationToken);
 
             return _connection.SendAsync(
-                "Execute", method, cancellicationToken);
+                "Execute", call, cancellicationToken);
         }
 
-        public object Invoke(RemoteCall method)
+        public object Invoke(RemoteCall call)
         {
-            var cancellicationToken = this.GetCancellationToken();
+            var cancellicationToken = this.GetCancellationToken(null);
 
             var task = _connection.InvokeAsync<RemoteResult>(
-                "Invoke", method, cancellicationToken);
+                "Invoke", call, cancellicationToken);
 
             var r = task.GetAwaiter().GetResult();
 
@@ -79,12 +89,12 @@ namespace Sparrow.Net.SignalR
             return null;
         }
 
-        public async Task<object> InvokeAsync(RemoteCall method)
+        public async Task<object> InvokeAsync(RemoteCall call, CancellationToken cancellationToken)
         {
-            var cancellicationToken = this.GetCancellationToken();
+            var cancellicationToken = this.GetCancellationToken(cancellationToken);
 
             var r = await _connection.InvokeAsync<RemoteResult>(
-                "Invoke", method, cancellicationToken);
+                "Invoke", call, cancellicationToken);
 
             if (r != null)
             {

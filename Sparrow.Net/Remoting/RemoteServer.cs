@@ -25,9 +25,9 @@ namespace Sparrow.Net.Remoting
 
             _provider = this.Services.BuildServiceProvider();
 
-            var executer = _provider.GetRequiredService<IRemoteExecuter>();
+            var executer = _provider.GetRequiredService<IRemoteSender>();
 
-            _options.Selector = new RemoteInterceptorSelector(executer);
+            _options.Selector = new ClientInterceptorSelector(executer);
         }
 
         public string HostUrl { get; }

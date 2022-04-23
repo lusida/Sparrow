@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Sparrow.Net.SignalR\Sparrow.Net.SignalR.csproj" />
     <ProjectReference Include="..\Sparrow.Wizard.Engine\Sparrow.Wizard.Engine.csproj" />
   </ItemGroup>
 
