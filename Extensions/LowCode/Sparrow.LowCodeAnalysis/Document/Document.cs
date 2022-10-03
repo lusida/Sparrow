@@ -30,13 +30,19 @@ namespace Sparrow.LowCodeAnalysis
             this.DirectoryPath = Path.GetDirectoryName(FilePath)!;
         }
 
+        [YamlIgnore]
         public string Id { get; }
+        [YamlIgnore]
         public string FilePath { get; }
+        [YamlIgnore]
         public string Extension { get; }
+        [YamlIgnore]
         public string DirectoryPath { get; }
         public string Name { get; }
         public int Version { get; }
+        [YamlIgnore]
         public DocumentType Type { get; }
+        [YamlIgnore]
         public Project Project { get; }
 
         public object? GetService(Type serviceType)
