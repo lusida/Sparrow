@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "tkjyZOZfT2SB6vkZIRFp0VW50LlobjqLxMOC9ONAKBgxXAHcUCWrF5Q+dKHv0T0rOX8tf1l2PKjtUl/eZvD5/g==",
+  "success": false,
+  "projectFilePath": "E:\\Github\\lusida\\Sparrow\\Modules\\Wizard\\Sparrow.Wizard.Host\\Sparrow.Wizard.Host.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "无法加载源 https://api.nuget.org/v3/index.json 的服务索引。",
+      "libraryId": "CoreRemoting"
+    }
+  ]
+}
