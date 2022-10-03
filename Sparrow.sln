@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32414.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow.Wizard.Host", "Sparrow.Wizard.Host\Sparrow.Wizard.Host.csproj", "{476F195B-29FC-4D8B-8F39-454D98D06D5E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{BCA9B51E-550A-4A84-B260-5A03D2AA6D52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow.Wizard.Engine", "Sparrow.Wizard.Engine\Sparrow.Wizard.Engine.csproj", "{E0598757-A3C2-4233-BB36-E30F5B2AE368}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{8B4CEF79-AFF7-4918-82B9-FDEC02471DF7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow.Net", "Sparrow.Net\Sparrow.Net.csproj", "{24556137-5430-4CC9-94F3-85913F5B3483}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wizard", "Wizard", "{A55146B1-FFE0-43A6-B96C-73DE4E831016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparrow.Net.SignalR", "Sparrow.Net.SignalR\Sparrow.Net.SignalR.csproj", "{48C5175A-0313-46CA-9C6C-DF2F6C497151}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LowCode", "LowCode", "{704D3E79-D155-426F-B7EA-07879BC976B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparrow.LowCodeAnalysis", "Extensions\LowCode\Sparrow.LowCodeAnalysis\Sparrow.LowCodeAnalysis.csproj", "{13E578B3-8623-4616-BAC6-47385CBD8189}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{C3C2205F-411F-4BEA-A54F-70381297F88B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,25 +21,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{476F195B-29FC-4D8B-8F39-454D98D06D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{476F195B-29FC-4D8B-8F39-454D98D06D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{476F195B-29FC-4D8B-8F39-454D98D06D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{476F195B-29FC-4D8B-8F39-454D98D06D5E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0598757-A3C2-4233-BB36-E30F5B2AE368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0598757-A3C2-4233-BB36-E30F5B2AE368}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0598757-A3C2-4233-BB36-E30F5B2AE368}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0598757-A3C2-4233-BB36-E30F5B2AE368}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24556137-5430-4CC9-94F3-85913F5B3483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24556137-5430-4CC9-94F3-85913F5B3483}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24556137-5430-4CC9-94F3-85913F5B3483}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24556137-5430-4CC9-94F3-85913F5B3483}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48C5175A-0313-46CA-9C6C-DF2F6C497151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48C5175A-0313-46CA-9C6C-DF2F6C497151}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48C5175A-0313-46CA-9C6C-DF2F6C497151}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48C5175A-0313-46CA-9C6C-DF2F6C497151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E578B3-8623-4616-BAC6-47385CBD8189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E578B3-8623-4616-BAC6-47385CBD8189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E578B3-8623-4616-BAC6-47385CBD8189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E578B3-8623-4616-BAC6-47385CBD8189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A55146B1-FFE0-43A6-B96C-73DE4E831016} = {BCA9B51E-550A-4A84-B260-5A03D2AA6D52}
+		{704D3E79-D155-426F-B7EA-07879BC976B8} = {8B4CEF79-AFF7-4918-82B9-FDEC02471DF7}
+		{13E578B3-8623-4616-BAC6-47385CBD8189} = {704D3E79-D155-426F-B7EA-07879BC976B8}
+		{C3C2205F-411F-4BEA-A54F-70381297F88B} = {704D3E79-D155-426F-B7EA-07879BC976B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D77C0AD2-893F-499D-B85E-1EE1F0191884}
