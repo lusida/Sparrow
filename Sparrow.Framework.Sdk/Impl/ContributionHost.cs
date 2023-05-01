@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sparrow.Framework.Sdk
 {
-    public abstract class ContributionHost<TAttribute>
-        : IContributionHost where TAttribute : InjectionAttribute
+    public abstract class ContributionHost : IContributionHost
     {
-        protected ContributionHost()
+        protected ContributionHost(string rootId)
         {
-            this.AttributeType = typeof(TAttribute);
+            this.RootId = rootId;
         }
 
-        public Type AttributeType { get; }
+        public string RootId { get; }
     }
 }

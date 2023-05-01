@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+Vy5XQQOo047HetDaKPXD36Th7tYWkzIKnEXzJCFlD2tGP/mNEEYEfkP1nlzxBcUwpDtSXfqmnt/FnxPk7t8VA==",
+  "success": true,
+  "projectFilePath": "E:\\Github\\Sparrow\\Sparrow.Common\\Sparrow.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

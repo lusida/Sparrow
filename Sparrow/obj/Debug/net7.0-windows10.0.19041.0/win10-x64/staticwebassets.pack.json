@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Github\\Sparrow\\Sparrow\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Sparrow.styles.css",
+      "PackagePath": "staticwebassets\\Sparrow.styles.css"
+    },
+    {
+      "Id": "E:\\Github\\Sparrow\\Sparrow\\wwwroot\\css\\lay.css",
+      "PackagePath": "staticwebassets\\css\\lay.css"
+    },
+    {
+      "Id": "E:\\Github\\Sparrow\\Sparrow\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Github\\Sparrow\\Sparrow\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "E:\\Github\\Sparrow\\Sparrow\\wwwroot\\lay.js",
+      "PackagePath": "staticwebassets\\lay.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.Sparrow.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.Sparrow.props",
+      "PackagePath": "build\\Sparrow.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.Sparrow.props",
+      "PackagePath": "buildMultiTargeting\\Sparrow.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.Sparrow.props",
+      "PackagePath": "buildTransitive\\Sparrow.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

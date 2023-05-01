@@ -30,14 +30,15 @@ namespace Sparrow.Framework.Sdk
             return _registry.Remove(host);
         }
 
-        public void Register<TContribution>() where TContribution : IContribution
+        public void Register<TContribution>(
+            string rootId, string? parentId = null) where TContribution : IContribution
         {
-            _registry.Register<TContribution>(_serviceProvider);
+            _registry.Register<TContribution>(_serviceProvider, rootId, parentId);
         }
 
         public bool Unregister<TContribution>() where TContribution : IContribution
         {
-            return _registry.Unregister<TContribution>(_serviceProvider);
+            return _registry.Unregister<TContribution>();
         }
     }
 }

@@ -14,7 +14,6 @@ namespace Sparrow.Framework.Sdk
         }
 
         public string Id { get; }
-        public string? ParentId { get; init; }
         public string Title { get; init; } = string.Empty;
         public string? Description { get; init; }
         public object? Group { get; init; }

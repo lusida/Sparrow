@@ -9,27 +9,33 @@ namespace Sparrow.Framework.Sdk
 {
     internal class ContributionRegistry : IContributionRegistry
     {
-        private readonly ConcurrentDictionary<Type, IContributionHost> _hosts;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly ConcurrentDictionary<string, IContributionHost> _hosts;
 
-        public ContributionRegistry(IEnumerable<IContributionHost> hosts)
+        public ContributionRegistry(IServiceProvider serviceProvider)
         {
-            _hosts = new ConcurrentDictionary<Type, IContributionHost>(
-                hosts.ToDictionary(m => m.AttributeType));
+            _serviceProvider = serviceProvider;
+
+            var items = serviceProvider.GetServices<IContributionHost>();
+
+            _hosts = new ConcurrentDictionary<string, IContributionHost>(
+                items.ToDictionary(m => m.RootId));
         }
 
         public IContributionHost Add(IContributionHost host)
         {
-            return _hosts.GetOrAdd(host.AttributeType, host);
+            return _hosts.GetOrAdd(host.RootId, host);
         }
 
         public bool Remove(IContributionHost host)
         {
-            return _hosts.TryRemove(host.AttributeType, out var _);
+            return _hosts.TryRemove(host.RootId, out var _);
         }
 
-        public void Register<TContribution>() where TContribution : IContribution
+        public void Register<TContribution>(
+            string rootId, string? parentId = null) where TContribution : IContribution
         {
-            throw new NotImplementedException();
+            this.Register<TContribution>(_serviceProvider, rootId, parentId);
         }
 
         public bool Unregister<TContribution>() where TContribution : IContribution
@@ -38,13 +44,10 @@ namespace Sparrow.Framework.Sdk
         }
 
         public void Register<TContribution>(
-            IServiceProvider serviceProvider) where TContribution : IContribution
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Unregister<TContribution>(
-            IServiceProvider serviceProvider) where TContribution : IContribution
+            IServiceProvider serviceProvider,
+            string rootId,
+            string? parentId = null)
+            where TContribution : IContribution
         {
             throw new NotImplementedException();
         }

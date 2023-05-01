@@ -14,7 +14,8 @@ namespace Sparrow.Framework.Sdk
         IContributionHost Add(IContributionHost host);
         bool Remove(IContributionHost host);
 
-        void Register<TContribution>() where TContribution : IContribution;
+        void Register<TContribution>(
+            string rootId, string? parentId = null) where TContribution : IContribution;
         bool Unregister<TContribution>() where TContribution : IContribution;
     }
 }

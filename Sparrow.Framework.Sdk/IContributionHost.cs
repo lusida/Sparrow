@@ -8,6 +8,10 @@ namespace Sparrow.Framework.Sdk
 {
     public interface IContributionHost
     {
-        Type AttributeType { get; }
+        string RootId { get; }
+
+        void Register<TContribution>(
+            TContribution contribution, string? parentId = null) where TContribution : IContribution;
+        bool Unregister<TContribution>() where TContribution : IContribution;
     }
 }
