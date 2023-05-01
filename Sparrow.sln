@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow.Common", "Sparrow.Common\Sparrow.Common.csproj", "{783D1DE2-D8B1-458C-A35E-68BD18AC8844}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow.Framework.Sdk", "Sparrow.Framework.Sdk\Sparrow.Framework.Sdk.csproj", "{C6AA6DB2-0730-417B-BD71-EDB9C4346023}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow", "Sparrow\Sparrow.csproj", "{02035783-2E7B-426B-A1FE-0AFA4239C9BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{05F77BD7-2CEC-4EA7-880E-D426403AD403}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6CE9D2A2-8D86-4968-A408-1B4CA1C40465}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sparrow.Framework.Controls", "Sparrow.Framework.Controls\Sparrow.Framework.Controls.csproj", "{E931E7BE-C22A-4713-A35F-3BCDE67B0221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparrow.Extensions.Main", "Modules\Sparrow.Extensions.Main\Sparrow.Extensions.Main.csproj", "{B0EF7943-3726-4FF7-BC42-D097FC52FDB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{783D1DE2-D8B1-458C-A35E-68BD18AC8844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783D1DE2-D8B1-458C-A35E-68BD18AC8844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783D1DE2-D8B1-458C-A35E-68BD18AC8844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783D1DE2-D8B1-458C-A35E-68BD18AC8844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AA6DB2-0730-417B-BD71-EDB9C4346023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AA6DB2-0730-417B-BD71-EDB9C4346023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AA6DB2-0730-417B-BD71-EDB9C4346023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AA6DB2-0730-417B-BD71-EDB9C4346023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02035783-2E7B-426B-A1FE-0AFA4239C9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02035783-2E7B-426B-A1FE-0AFA4239C9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02035783-2E7B-426B-A1FE-0AFA4239C9BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{02035783-2E7B-426B-A1FE-0AFA4239C9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02035783-2E7B-426B-A1FE-0AFA4239C9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02035783-2E7B-426B-A1FE-0AFA4239C9BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E931E7BE-C22A-4713-A35F-3BCDE67B0221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E931E7BE-C22A-4713-A35F-3BCDE67B0221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E931E7BE-C22A-4713-A35F-3BCDE67B0221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E931E7BE-C22A-4713-A35F-3BCDE67B0221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EF7943-3726-4FF7-BC42-D097FC52FDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EF7943-3726-4FF7-BC42-D097FC52FDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EF7943-3726-4FF7-BC42-D097FC52FDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EF7943-3726-4FF7-BC42-D097FC52FDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0EF7943-3726-4FF7-BC42-D097FC52FDB4} = {05F77BD7-2CEC-4EA7-880E-D426403AD403}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2020C93E-EA37-4116-9863-2D6F8DC02CED}
+	EndGlobalSection
+EndGlobal

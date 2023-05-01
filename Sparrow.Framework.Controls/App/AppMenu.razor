@@ -1,0 +1,58 @@
+﻿@namespace Sparrow.Framework.Controls
+
+<Menu Mode=MenuMode.Horizontal @ref="_menu"
+      OnMenuItemClicked="OnMenuItemClick"
+      OnSubmenuClicked="OnSubMenuClick">
+    @{
+        var items = this.Items.OrderBy(m => m.Order);
+    }
+    @foreach (var item in items.Where(m => m.ParentId == null))
+    {
+        @this.Parse(items,item)
+        ;
+    }
+</Menu>
+
+@code {
+    private RenderFragment Parse(
+        IEnumerable<AppContribution> items, AppContribution item)
+    {
+        switch (item)
+        {
+            case AppCommand command:
+                {
+                    return@<AppMenuItem Key="@command.Id"
+                                        Command="@command"
+                                        Disabled="@(!command.IsEnabled)">
+        @command.Title
+    </AppMenuItem>
+    ;
+                }
+            default:
+                {
+                    var flag = false;
+                    var groups = items.Where(
+                m => m.ParentId == item.Id).GroupBy(m => m.Group);
+
+                    return
+    @<SubMenu Title="@item.Title">
+
+        @foreach (var group in groups)
+        {
+            if (flag)
+            {
+                <MenuDivider />
+            }
+
+            foreach (var child in group)
+            {
+                this.Parse(items, child);
+            }
+
+            flag = true;
+        }
+    </SubMenu>;
+                }
+        }
+    }
+}

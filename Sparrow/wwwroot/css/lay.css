@@ -1,0 +1,78 @@
+﻿body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.layout {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+    .layout[direction="horizontal"] {
+        flex-direction: row;
+    }
+
+        .layout[direction="horizontal"] > .layout-header {
+            width: 10vw;
+            min-width: 60px;
+            height: 100%;
+        }
+
+        .layout[direction="horizontal"] > .layout-footer {
+            width: 10vw;
+            min-width: 60px;
+            height: 100%;
+        }
+
+    .layout .layout {
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+
+.layout-header {
+    min-height: 24px;
+    height: auto;
+    width: 100%;
+}
+
+.layout-left {
+    height: 100%;
+}
+
+.layout-right {
+    height: 100%;
+}
+
+.layout-footer {
+    min-height: 24px;
+    width: 100%;
+    height: auto;
+}
+
+.layout-body {
+    flex: 1;
+}
+
+.layout .ant-menu-horizontal {
+    height: auto;
+    line-height: 26px;
+    border-bottom:0px!important;
+}
+
+    .layout .ant-menu-horizontal .ant-menu-item, .layout .ant-menu-horizontal .ant-menu-submenu {
+        padding: 0px 6px !important;
+        line-height: 26px;
+    }
+    .layout .ant-menu-item-group-title{
+        padding:2px 5px;
+    }
+.layout .ant-tabs-tab{
+    padding:2px 4px!important;
+}
