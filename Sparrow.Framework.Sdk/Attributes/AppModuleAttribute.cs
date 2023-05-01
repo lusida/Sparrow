@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Sparrow.Framework.Sdk
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    public class ContributionHostAttribute : InjectionAttribute<IContributionHost>
+    public sealed class AppModuleAttribute : InjectionAttribute<IAppModule>
     {
     }
 }

@@ -1,15 +1,26 @@
 {
   "Version": 1,
-  "Hash": "tJPgv34ugyQl4WGw+pWHOqTFOrpnVdzGwSclg5fEHns=",
+  "Hash": "LVpdQ6xUu8YsXJgKBbA3KP4XmazrPONIfom33A107Yw=",
   "Source": "Sparrow",
   "BasePath": "/",
   "Mode": "Root",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "E:\\Github\\Sparrow\\Modules\\Sparrow.Extensions.Main\\Sparrow.Extensions.Main.csproj",
+      "Identity": "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Extensions\\Sparrow.Modules.Extensions.csproj",
       "Version": 2,
-      "Source": "Sparrow.Extensions.Main",
+      "Source": "Sparrow.Modules.Extensions",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU;TargetFramework=net7.0-windows10.0.19041.0",
+      "AdditionalPublishPropertiesToRemove": "RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU;TargetFramework=net7.0-windows10.0.19041.0",
+      "AdditionalBuildPropertiesToRemove": "RuntimeIdentifier;SelfContained"
+    },
+    {
+      "Identity": "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Main\\Sparrow.Modules.Main.csproj",
+      "Version": 2,
+      "Source": "Sparrow.Modules.Main",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU;TargetFramework=net7.0-windows10.0.19041.0",
       "AdditionalPublishPropertiesToRemove": "RuntimeIdentifier;SelfContained",

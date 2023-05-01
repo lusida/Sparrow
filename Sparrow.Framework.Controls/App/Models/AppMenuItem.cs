@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sparrow.Framework.Controls
 {
-    internal class AppMenuItem
+    public class AppMenuItem
     {
         public AppMenuItem(AppContribution contribution)
         {

@@ -1,8 +1,8 @@
-﻿@namespace Sparrow.Extensions.Main
+﻿@namespace Sparrow.Modules.Main
 
 <div class="layout">
     <div class="layout-header">
-        <AppMenu @ref="_menu"/>
+        <AppMenu Roots="@_menuItems" Click="@OnMenuClick" />
     </div>
     <div class="layout-body">
         <div direction="horizontal" class="layout">

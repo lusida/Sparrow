@@ -1,62 +1,15 @@
 ﻿using System.Collections.Concurrent;
+using System.Collections.ObjectModel;
 
 namespace Sparrow.Framework.Controls
 {
     public partial class AppMenu
     {
         private Menu _menu = null!;
-
-        private readonly List<AppMenuItem> _roots;
-        private readonly ConcurrentDictionary<string, AppMenuItem> _items;
-
-        public AppMenu()
-        {
-            _roots = new List<AppMenuItem>();
-
-            _items = new ConcurrentDictionary<string, AppMenuItem>();
-        }
-
-        public void Add(
-            AppContribution contribution, string? parentId)
-        {
-            var item = new AppMenuItem(contribution);
-
-            if (parentId != null &&
-                _items.TryGetValue(parentId, out var parent))
-            {
-
-                if (_items.TryAdd(contribution.Id, item))
-                {
-                    parent.Children.Add(item);
-
-                    item.Parent = parent;
-                }
-            }
-            else
-            {
-                if (_items.TryAdd(contribution.Id, item))
-                {
-                    _roots.Add(item);
-                }
-            }
-        }
-
-        public bool Remove(AppContribution contribution)
-        {
-            if (_items.TryRemove(contribution.Id, out var item))
-            {
-                if (item.Parent == null)
-                {
-                    return _roots.Remove(item);
-                }
-                else
-                {
-                    return item.Parent.Children.Remove(item);
-                }
-            }
-
-            return false;
-        }
+        [Parameter]
+        public ObservableCollection<AppMenuItem> Roots { get; set; } = null!;
+        [Parameter]
+        public EventCallback<string> Click { get; set; }
 
         public Task RefreshAsync()
         {
@@ -66,12 +19,9 @@ namespace Sparrow.Framework.Controls
             });
         }
 
-        private async void OnMenuItemClick(AntDesign.MenuItem item)
+        private void OnMenuItemClick(AntDesign.MenuItem item)
         {
-            if (_items.TryGetValue(item.Key, out var appItem))
-            {
-                await appItem.ExecuteAsync(item);
-            }
+            this.Click.InvokeAsync(item.Key);
         }
 
         private void OnSubMenuClick(SubMenu item)

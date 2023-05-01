@@ -13,6 +13,9 @@ namespace Sparrow.Common
     public class InjectionAttribute : DetectionAttribute
     {
         public InjectionAttribute(
+            ServiceLifetime lifetime = ServiceLifetime.Singleton) : this(null, lifetime) { }
+
+        public InjectionAttribute(
             Type? serviceType, ServiceLifetime lifetime = ServiceLifetime.Singleton)
         {
             this.ServiceType = serviceType;

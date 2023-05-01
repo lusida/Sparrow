@@ -20,6 +20,11 @@ namespace Sparrow.Framework.Sdk
             _serviceProvider = serviceProvider;
         }
 
+        public IContributionHost Get(string rootId)
+        {
+            return _registry.Get(rootId);
+        }
+
         public IContributionHost Add(IContributionHost host)
         {
             return _registry.Add(host);

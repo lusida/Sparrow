@@ -52,8 +52,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Modules\Sparrow.Extensions.Main\Sparrow.Extensions.Main.csproj" />
-      <ProjectReference Include="..\Sparrow.Framework.Controls\Sparrow.Framework.Controls.csproj" />
+      <ProjectReference Include="..\Modules\Sparrow.Modules.Extensions\Sparrow.Modules.Extensions.csproj" />
+      <ProjectReference Include="..\Modules\Sparrow.Modules.Main\Sparrow.Modules.Main.csproj" />
     </ItemGroup>
 
 </Project>

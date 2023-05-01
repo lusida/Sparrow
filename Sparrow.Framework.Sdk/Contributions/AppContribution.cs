@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sparrow.Framework.Sdk
 {
-    public abstract class AppContribution
+    public abstract class AppContribution : IContribution
     {
         protected AppContribution(string id)
         {

@@ -4,7 +4,7 @@
       OnMenuItemClicked="OnMenuItemClick"
       OnSubmenuClicked="OnSubMenuClick">
 
-    @foreach (var item in _roots.OrderBy(m => m.Contribution.Order))
+    @foreach (var item in this.Roots.OrderBy(m => m.Contribution.Order))
     {
         this.Parse(item);
     }
@@ -55,5 +55,4 @@
         @item.Contribution.Title
     </span>;
     }
-}
 }

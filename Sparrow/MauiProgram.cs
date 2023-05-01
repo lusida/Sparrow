@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Sparrow.Framework.Controls;
 using Sparrow.Framework.Sdk;
 
 namespace LayDemo
@@ -25,7 +26,11 @@ namespace LayDemo
 #endif
 
 
-            return builder.Build();
+            var app = builder.Build();
+
+            app.UseSparrow();
+
+            return app;
         }
     }
 }

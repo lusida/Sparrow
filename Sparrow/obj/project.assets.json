@@ -1921,6 +1921,32 @@
         "runtime": {
           "bin/placeholder/Sparrow.Framework.Sdk.dll": {}
         }
+      },
+      "Sparrow.Modules.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        }
+      },
+      "Sparrow.Modules.Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        }
       }
     },
     "net7.0-maccatalyst16.1/maccatalyst-x64": {
@@ -4144,6 +4170,32 @@
         "runtime": {
           "bin/placeholder/Sparrow.Framework.Sdk.dll": {}
         }
+      },
+      "Sparrow.Modules.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        }
+      },
+      "Sparrow.Modules.Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        }
       }
     },
     "net7.0-maccatalyst16.1/win10-x64": {
@@ -6363,6 +6415,32 @@
         "runtime": {
           "bin/placeholder/Sparrow.Framework.Sdk.dll": {}
         }
+      },
+      "Sparrow.Modules.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        }
+      },
+      "Sparrow.Modules.Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        }
       }
     },
     "net7.0-windows10.0.19041": {
@@ -8422,6 +8500,32 @@
         },
         "runtime": {
           "bin/placeholder/Sparrow.Framework.Sdk.dll": {}
+        }
+      },
+      "Sparrow.Modules.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        }
+      },
+      "Sparrow.Modules.Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
         }
       }
     },
@@ -10755,6 +10859,32 @@
         },
         "runtime": {
           "bin/placeholder/Sparrow.Framework.Sdk.dll": {}
+        }
+      },
+      "Sparrow.Modules.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        }
+      },
+      "Sparrow.Modules.Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
         }
       }
     },
@@ -13090,6 +13220,32 @@
         },
         "runtime": {
           "bin/placeholder/Sparrow.Framework.Sdk.dll": {}
+        }
+      },
+      "Sparrow.Modules.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Extensions.dll": {}
+        }
+      },
+      "Sparrow.Modules.Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Sparrow.Framework.Controls": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sparrow.Modules.Main.dll": {}
         }
       }
     }
@@ -19497,6 +19653,16 @@
       "type": "project",
       "path": "../Sparrow.Framework.Sdk/Sparrow.Framework.Sdk.csproj",
       "msbuildProject": "../Sparrow.Framework.Sdk/Sparrow.Framework.Sdk.csproj"
+    },
+    "Sparrow.Modules.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../Modules/Sparrow.Modules.Extensions/Sparrow.Modules.Extensions.csproj",
+      "msbuildProject": "../Modules/Sparrow.Modules.Extensions/Sparrow.Modules.Extensions.csproj"
+    },
+    "Sparrow.Modules.Main/1.0.0": {
+      "type": "project",
+      "path": "../Modules/Sparrow.Modules.Main/Sparrow.Modules.Main.csproj",
+      "msbuildProject": "../Modules/Sparrow.Modules.Main/Sparrow.Modules.Main.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -19508,7 +19674,8 @@
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.81",
-      "Sparrow.Framework.Controls >= 1.0.0"
+      "Sparrow.Modules.Extensions >= 1.0.0",
+      "Sparrow.Modules.Main >= 1.0.0"
     ],
     "net7.0-windows10.0.19041": [
       "Microsoft.AspNetCore.Components.WebView.Maui >= 7.0.81",
@@ -19521,7 +19688,8 @@
       "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop >= 7.0.81",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.755",
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
-      "Sparrow.Framework.Controls >= 1.0.0"
+      "Sparrow.Modules.Extensions >= 1.0.0",
+      "Sparrow.Modules.Main >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -19559,16 +19727,22 @@
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
           "projectReferences": {
-            "E:\\Github\\Sparrow\\Sparrow.Framework.Controls\\Sparrow.Framework.Controls.csproj": {
-              "projectPath": "E:\\Github\\Sparrow\\Sparrow.Framework.Controls\\Sparrow.Framework.Controls.csproj"
+            "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Extensions\\Sparrow.Modules.Extensions.csproj": {
+              "projectPath": "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Extensions\\Sparrow.Modules.Extensions.csproj"
+            },
+            "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Main\\Sparrow.Modules.Main.csproj": {
+              "projectPath": "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Main\\Sparrow.Modules.Main.csproj"
             }
           }
         },
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
           "projectReferences": {
-            "E:\\Github\\Sparrow\\Sparrow.Framework.Controls\\Sparrow.Framework.Controls.csproj": {
-              "projectPath": "E:\\Github\\Sparrow\\Sparrow.Framework.Controls\\Sparrow.Framework.Controls.csproj"
+            "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Extensions\\Sparrow.Modules.Extensions.csproj": {
+              "projectPath": "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Extensions\\Sparrow.Modules.Extensions.csproj"
+            },
+            "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Main\\Sparrow.Modules.Main.csproj": {
+              "projectPath": "E:\\Github\\Sparrow\\Modules\\Sparrow.Modules.Main\\Sparrow.Modules.Main.csproj"
             }
           }
         }

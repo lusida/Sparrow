@@ -22,6 +22,16 @@ namespace Sparrow.Framework.Sdk
                 items.ToDictionary(m => m.RootId));
         }
 
+        public IContributionHost Get(string rootId)
+        {
+            if (_hosts.TryGetValue(rootId, out var host))
+            {
+                return host;
+            }
+
+            throw new KeyNotFoundException(rootId);
+        }
+
         public IContributionHost Add(IContributionHost host)
         {
             return _hosts.GetOrAdd(host.RootId, host);

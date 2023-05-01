@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sparrow.Framework.Sdk
 {
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    public class ContributionHostAttribute : InjectionAttribute<IContributionHost>
+    public interface IAppModule
     {
+        int Order { get; }
+
+        void Initialize();
     }
 }

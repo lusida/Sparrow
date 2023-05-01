@@ -13,6 +13,7 @@ namespace Sparrow.Framework.Sdk
     {
         IContributionHost Add(IContributionHost host);
         bool Remove(IContributionHost host);
+        IContributionHost Get(string rootId);
 
         void Register<TContribution>(
             string rootId, string? parentId = null) where TContribution : IContribution;
