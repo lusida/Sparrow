@@ -1,8 +1,8 @@
-﻿@namespace Sparrow.Framework.Controls
+﻿@namespace Sparrow.Extensions.Main
 
 <div class="layout">
     <div class="layout-header">
-        <AppMenu Items="@MenuItems"/>
+        <AppMenu @ref="_menu"/>
     </div>
     <div class="layout-body">
         <div direction="horizontal" class="layout">

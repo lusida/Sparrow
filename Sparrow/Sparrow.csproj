@@ -52,6 +52,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Modules\Sparrow.Extensions.Main\Sparrow.Extensions.Main.csproj" />
       <ProjectReference Include="..\Sparrow.Framework.Controls\Sparrow.Framework.Controls.csproj" />
     </ItemGroup>
 

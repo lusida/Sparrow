@@ -1,11 +1,22 @@
 {
   "Version": 1,
-  "Hash": "H6Rvu52JtBIGpBo/T9wi8FGusME0974sn8hbNuQDVfY=",
+  "Hash": "tJPgv34ugyQl4WGw+pWHOqTFOrpnVdzGwSclg5fEHns=",
   "Source": "Sparrow",
   "BasePath": "/",
   "Mode": "Root",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\Github\\Sparrow\\Modules\\Sparrow.Extensions.Main\\Sparrow.Extensions.Main.csproj",
+      "Version": 2,
+      "Source": "Sparrow.Extensions.Main",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU;TargetFramework=net7.0-windows10.0.19041.0",
+      "AdditionalPublishPropertiesToRemove": "RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU;TargetFramework=net7.0-windows10.0.19041.0",
+      "AdditionalBuildPropertiesToRemove": "RuntimeIdentifier;SelfContained"
+    },
     {
       "Identity": "E:\\Github\\Sparrow\\Sparrow.Framework.Controls\\Sparrow.Framework.Controls.csproj",
       "Version": 2,

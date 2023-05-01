@@ -16,13 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Github\Sparrow\Sparrow.Framework.Controls
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Github/Sparrow/Sparrow.Framework.Controls/App/AppLayout.razor]
-build_metadata.AdditionalFiles.GenKind = 
-build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = QXBwXEFwcExheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/Github/Sparrow/Sparrow.Framework.Controls/App/AppMenu.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 

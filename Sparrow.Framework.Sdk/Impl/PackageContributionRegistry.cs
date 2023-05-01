@@ -36,9 +36,10 @@ namespace Sparrow.Framework.Sdk
             _registry.Register<TContribution>(_serviceProvider, rootId, parentId);
         }
 
-        public bool Unregister<TContribution>() where TContribution : IContribution
+        public bool Unregister<TContribution>(
+            string rootId) where TContribution : IContribution
         {
-            return _registry.Unregister<TContribution>();
+            return _registry.Unregister<TContribution>(_serviceProvider, rootId);
         }
     }
 }

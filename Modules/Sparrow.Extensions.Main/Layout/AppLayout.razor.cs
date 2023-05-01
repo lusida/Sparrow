@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sparrow.Framework.Controls
+namespace Sparrow.Extensions.Main
 {
     public partial class AppLayout
     {
-        [Parameter]
-        public List<AppContribution> MenuItems { get; set; } = new List<AppContribution>();
+        private AppMenu? _menu;
+
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+        }
     }
 }

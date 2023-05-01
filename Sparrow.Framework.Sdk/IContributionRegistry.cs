@@ -16,6 +16,7 @@ namespace Sparrow.Framework.Sdk
 
         void Register<TContribution>(
             string rootId, string? parentId = null) where TContribution : IContribution;
-        bool Unregister<TContribution>() where TContribution : IContribution;
+        bool Unregister<TContribution>(
+            string rootId) where TContribution : IContribution;
     }
 }

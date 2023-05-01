@@ -14,5 +14,11 @@ namespace Sparrow.Framework.Sdk
         }
 
         public string RootId { get; }
+
+        public abstract void Register<TContribution>(
+            TContribution contribution, string? parentId = null) where TContribution : IContribution;
+
+        public abstract bool Unregister<TContribution>(
+            TContribution contribution) where TContribution : IContribution;
     }
 }

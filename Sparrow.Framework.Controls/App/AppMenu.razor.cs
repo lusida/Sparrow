@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Timers;
-using MenuItem = AntDesign.MenuItem;
+﻿using System.Collections.Concurrent;
 
 namespace Sparrow.Framework.Controls
 {
@@ -14,18 +6,71 @@ namespace Sparrow.Framework.Controls
     {
         private Menu _menu = null!;
 
-        [Parameter]
-        public List<AppContribution> Items { get; set; } = new List<AppContribution>();
+        private readonly List<AppMenuItem> _roots;
+        private readonly ConcurrentDictionary<string, AppMenuItem> _items;
 
-        private async void OnMenuItemClick(MenuItem item)
+        public AppMenu()
         {
-            if (item is AppMenuItem menuItem &&
-                menuItem.Command != null)
+            _roots = new List<AppMenuItem>();
+
+            _items = new ConcurrentDictionary<string, AppMenuItem>();
+        }
+
+        public void Add(
+            AppContribution contribution, string? parentId)
+        {
+            var item = new AppMenuItem(contribution);
+
+            if (parentId != null &&
+                _items.TryGetValue(parentId, out var parent))
             {
-                if (await menuItem.Command.CanExecuteAsync(menuItem))
+
+                if (_items.TryAdd(contribution.Id, item))
                 {
-                    await menuItem.Command.ExecuteAsync(menuItem);
+                    parent.Children.Add(item);
+
+                    item.Parent = parent;
                 }
+            }
+            else
+            {
+                if (_items.TryAdd(contribution.Id, item))
+                {
+                    _roots.Add(item);
+                }
+            }
+        }
+
+        public bool Remove(AppContribution contribution)
+        {
+            if (_items.TryRemove(contribution.Id, out var item))
+            {
+                if (item.Parent == null)
+                {
+                    return _roots.Remove(item);
+                }
+                else
+                {
+                    return item.Parent.Children.Remove(item);
+                }
+            }
+
+            return false;
+        }
+
+        public Task RefreshAsync()
+        {
+            return this.InvokeAsync(() =>
+            {
+                this.StateHasChanged();
+            });
+        }
+
+        private async void OnMenuItemClick(AntDesign.MenuItem item)
+        {
+            if (_items.TryGetValue(item.Key, out var appItem))
+            {
+                await appItem.ExecuteAsync(item);
             }
         }
 

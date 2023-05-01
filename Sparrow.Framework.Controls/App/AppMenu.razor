@@ -3,56 +3,57 @@
 <Menu Mode=MenuMode.Horizontal @ref="_menu"
       OnMenuItemClicked="OnMenuItemClick"
       OnSubmenuClicked="OnSubMenuClick">
-    @{
-        var items = this.Items.OrderBy(m => m.Order);
-    }
-    @foreach (var item in items.Where(m => m.ParentId == null))
+
+    @foreach (var item in _roots.OrderBy(m => m.Contribution.Order))
     {
-        @this.Parse(items,item)
-        ;
+        this.Parse(item);
     }
 </Menu>
 
 @code {
-    private RenderFragment Parse(
-        IEnumerable<AppContribution> items, AppContribution item)
+    private RenderFragment Parse(AppMenuItem item)
     {
-        switch (item)
+        switch (item.Contribution)
         {
             case AppCommand command:
                 {
-                    return@<AppMenuItem Key="@command.Id"
-                                        Command="@command"
-                                        Disabled="@(!command.IsEnabled)">
-        @command.Title
-    </AppMenuItem>
+                    return@<MenuItem Key="@command.Id" Disabled="@(!command.IsEnabled)">
+        @if (command.Icon != null)
+            {
+                <Icon Type="@command.Icon" />
+            }
+            @command.Title
+            @if (command.ShortcutKey != null)
+            {
+                <span class="layout-menu-shortcut">@command.ShortcutKey</span>
+            }
+        </MenuItem>
     ;
                 }
             default:
                 {
-                    var flag = false;
-                    var groups = items.Where(
-                m => m.ParentId == item.Id).GroupBy(m => m.Group);
-
-                    return
-    @<SubMenu Title="@item.Title">
-
-        @foreach (var group in groups)
-        {
-            if (flag)
+                    return@<SubMenu TitleTemplate="@this.ParseTitle(item)">
+        @foreach (var child in item.Children)
             {
-                <MenuDivider />
+                this.Parse(child);
             }
-
-            foreach (var child in group)
-            {
-                this.Parse(items, child);
-            }
-
-            flag = true;
-        }
-    </SubMenu>;
+        </SubMenu>
+    ;
                 }
+    ;
         }
     }
+
+    private RenderFragment ParseTitle(AppMenuItem item)
+    {
+        return
+    @<span>
+        @if (item.Contribution.Icon != null)
+        {
+            <Icon Type="@item.Contribution.Icon" />
+        }
+        @item.Contribution.Title
+    </span>;
+    }
+}
 }

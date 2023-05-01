@@ -15,6 +15,8 @@ namespace Sparrow.Framework.Sdk
 
         public string Id { get; }
         public string Title { get; init; } = string.Empty;
+        public string? Icon { get; protected set; }
+        public string? ShortcutKey { get; init; }
         public string? Description { get; init; }
         public object? Group { get; init; }
         public int Order { get; init; }

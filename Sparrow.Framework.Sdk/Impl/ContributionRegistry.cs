@@ -38,9 +38,24 @@ namespace Sparrow.Framework.Sdk
             this.Register<TContribution>(_serviceProvider, rootId, parentId);
         }
 
-        public bool Unregister<TContribution>() where TContribution : IContribution
+        public bool Unregister<TContribution>(
+            string rootId) where TContribution : IContribution
         {
-            throw new NotImplementedException();
+            return this.Unregister<TContribution>(_serviceProvider, rootId);
+        }
+
+        public bool Unregister<TContribution>(
+            IServiceProvider serviceProvider, string rootId) where TContribution : IContribution
+        {
+            if (_hosts.TryGetValue(rootId, out var host))
+            {
+                var contribution =
+                    serviceProvider.GetRequiredService<TContribution>();
+
+                return host.Unregister(contribution);
+            }
+
+            return false;
         }
 
         public void Register<TContribution>(
@@ -49,7 +64,13 @@ namespace Sparrow.Framework.Sdk
             string? parentId = null)
             where TContribution : IContribution
         {
-            throw new NotImplementedException();
+            if (_hosts.TryGetValue(rootId, out var host))
+            {
+                var contribution =
+                    serviceProvider.GetRequiredService<TContribution>();
+
+                host.Register(contribution, parentId);
+            }
         }
     }
 }
